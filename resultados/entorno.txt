@@ -1,0 +1,6 @@
+java.version=25.0.4
+java.vm=OpenJDK 64-Bit Server VM 25.0.4+7-LTS
+os=Mac OS X 27.2.1 aarch64
+cpus=8
+maxMemoryMB=4096
+jvmArgs=[]
