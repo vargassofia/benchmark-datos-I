@@ -1,3 +1,5 @@
+package ordenamiento.algoritmos;
+
 /**
  * Shell Sort sin optimizaciones.
  *

@@ -1,7 +1,7 @@
+package ordenamiento.algoritmos;
+
 /**
  * Quicksort sin optimizaciones, con PIVOTE FIJO = ÚLTIMO elemento.
- * (Acordar con la Persona 3 que ambos usan "último"; si deciden "primero",
- *  solo hay que cambiar la función partition.)
  *
  * Sin optimizaciones significa:
  *  - El pivote siempre es a[hi]. No hay mediana de 3 ni pivote aleatorio.

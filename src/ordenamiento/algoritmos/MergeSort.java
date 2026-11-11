@@ -1,3 +1,5 @@
+package ordenamiento.algoritmos;
+
 /**
  * Merge Sort recursivo "de arriba hacia abajo" (top-down), sin optimizaciones.
  *

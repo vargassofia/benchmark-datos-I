@@ -1,4 +1,0 @@
-algoritmo,tipo_entrada,n,motivo
-Quicksort,ascendente,32000,DESBORDAMIENTO_PILA
-Quicksort,descendente,32000,DESBORDAMIENTO_PILA
-Quicksort,duplicados,256000,DESBORDAMIENTO_PILA
