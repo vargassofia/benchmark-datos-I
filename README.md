@@ -40,6 +40,46 @@ En Windows (PowerShell), el primer paso es:
 javac -encoding UTF-8 -d out (Get-ChildItem -Recurse src -Filter *.java).FullName
 ```
 
+### En macOS
+
+1. Instalar un JDK 17 o superior (si `java -version` no muestra uno). Con [Homebrew](https://brew.sh):
+
+   ```bash
+   brew install --cask temurin
+   java -version
+   ```
+
+   Si hay varios JDK instalados, se lista cuáles hay con `/usr/libexec/java_home -V` y se elige
+   uno para la sesión con `export JAVA_HOME=$(/usr/libexec/java_home -v 25)`.
+
+2. Desde la Terminal (zsh), en la carpeta del proyecto, compilar y ejecutar igual que arriba:
+
+   ```bash
+   javac -encoding UTF-8 -d out $(find src -name "*.java")
+
+   java -cp out ordenamiento.Validacion
+   java -cp out ordenamiento.Benchmark resultados
+   java -cp out ordenamiento.ConteoOperaciones resultados
+   java -Djava.awt.headless=true -cp out ordenamiento.Graficas resultados
+   ```
+
+   La opción `-Djava.awt.headless=true` evita que aparezca el ícono de Java en el Dock al
+   generar las gráficas; las imágenes se crean igual sin ella.
+
+3. Abrir las gráficas generadas:
+
+   ```bash
+   open resultados/*.png
+   ```
+
+Notas:
+
+- Si la ruta de la carpeta tiene espacios, `$(find ...)` separa mal los nombres; en ese caso
+  compilar con `find src -name "*.java" -print0 | xargs -0 javac -encoding UTF-8 -d out`.
+- Durante el benchmark conviene tener la Mac conectada a la corriente y cerrar otras
+  aplicaciones, para reducir el ruido en los tiempos. Para evitar que se suspenda en las
+  corridas largas: `caffeinate -i java -cp out ordenamiento.Benchmark resultados`.
+
 ## Metodología
 
 - Entradas de enteros entre 0 y 999 999: aleatorio, ascendente (el aleatorio ordenado),
