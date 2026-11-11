@@ -1,7 +1,7 @@
 # Benchmark de algoritmos de ordenamiento
 
 Tarea extraclase #2 — Algoritmos y Estructuras de Datos I (CE 1103), TEC, II Semestre 2026.
-Grupo: Mariel Herrera, Sofía Vargas González y María Ureña Carrasco.
+Grupo: Mariel Herrera González, Sofía Vargas González y María Ureña Carrasco.
 
 Comprueba experimentalmente la complejidad de Selection, Bubble, Insertion, Shell, Merge,
 Quicksort (pivote fijo = último elemento) y Radix (LSD, base 10), todos **sin optimizaciones**.
